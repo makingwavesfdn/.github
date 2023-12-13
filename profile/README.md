@@ -1,4 +1,4 @@
-## Hi there 👋
+## Welcome to Making Waves Education Foundation
 
 #### Chatbot v3.3
 Last updated December 13, 2023
