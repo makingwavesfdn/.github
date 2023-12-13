@@ -1,6 +1,14 @@
 ## Hi there 👋
 
 #### Chatbot v3.3
+Last updated December 13, 2023
+
+Required access
+- GitHub
+- Twilio
+- Amazon Web Services Console
+- Stack AI
+- OpenAI
 
 An inbound SMS is received by Twilio
 
