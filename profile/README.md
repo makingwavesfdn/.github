@@ -29,7 +29,7 @@ AWS Lambda c57bf700-81ed-41dd-95d9-04116488694f
     - Gets conversation history from AWS DynamoDB Table 4d16cb38-d21c-40ff-b33e-29bf273db051
     - Passes inbound SMS and conversation history to Stack-AI --> Production --> FAFSA Knowledge Base
     - Performs a retrieval augmented generation on the FAFSA Knowledge Base
-    - FAFSA Knowledge Base last updated on December 12, 2023
+      - FAFSA Knowledge Base last updated on December 12, 2023
     - Returns an SMS response via Twilio
     - Counts the number of messages in the user's conversation history
     - If the number of messages exceeds the max, then deletes the two oldest messages
