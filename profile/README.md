@@ -1,4 +1,4 @@
-## Welcome to Making Waves Education Foundation
+## See what's in our GitHub
 
 #### Chatbot v3.3 - release in January 2024
 - GitHub Repository V-3.3-001-C-945
