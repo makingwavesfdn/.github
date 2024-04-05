@@ -8,6 +8,10 @@
   - Not sure if this is used.
   - 
 
+- Webhook Handler for 769z
+  - https://xqrizaxxua2apo3s7lykzghmx40yywmz.lambda-url.us-east-1.on.aws/
+
+
 ## Chatbot v3.3 - release in January 2024
 - GitHub Repository V-3.3-001-C-945
   - When a user texts the chatbot, the chatbot will route the prompt to the correct processor - Stack-AI, Dall-E 2, or GPT-4-1106-Turbo - and respond, via text, with context from previous conversations.
