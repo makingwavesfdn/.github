@@ -9,9 +9,11 @@
   - Not sure if this is used.
   - Webhook Handler is Lambda Function 50247cd4-f0b9-49ec-8fab-558dd4cb08b2
 
-- Webhook Handler for 769z
-  - Lambda Function 4f5b07f7-0e95-45ca-8896-f83ce214cc25
-
+- MyStateMachine-769znuqgd
+  - Receives a contact's payload from ActiveCampaign via webhook
+  - Extracts a custom field value from the payload which must be defined as https.../[field_name]
+  - Appends the field value to the contact's conversation history on DynamoDB as an assistant message
+  - Webhook Handler is Lambda Function 4f5b07f7-0e95-45ca-8896-f83ce214cc25
 
 ## Chatbot v3.3 - release in January 2024
 - GitHub Repository V-3.3-001-C-945
