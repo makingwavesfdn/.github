@@ -9,7 +9,7 @@
   - 
 
 - Webhook Handler for 769z
-  - https://xqrizaxxua2apo3s7lykzghmx40yywmz.lambda-url.us-east-1.on.aws/
+  - 
 
 
 ## Chatbot v3.3 - release in January 2024
