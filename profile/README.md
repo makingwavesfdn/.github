@@ -6,11 +6,18 @@
   - Webhook Handler is Lambda Function 15358804-ad40-463e-a6b3-36232e30bcb3
  
 - MyStateMachine-dbd8
-  - Not sure if this is used.
   - Webhook Handler is Lambda Function 50247cd4-f0b9-49ec-8fab-558dd4cb08b2
+  - Receives a contact's payload from ActiveCampaign via webhook
+  - Extracts a custom field value from the payload which must be defined as https.../[field_name]
+  - Extracts a contact's email address and converts it to senderPhoneNumber, the primary key for DynamoDB
+  - Retrieves the contact's conversation history and conversation summary from DynamoDB
+  - Passes the conversation history and conversation summary to OpenAI to personalize the field value
+  - Posts the personalized field value to a custom field [%NEXT] on ActiveCampaign
+
 
 - MyStateMachine-769znuqgd
   - Receives a contact's payload from ActiveCampaign via webhook
+  - Extracts a contact's email address and converts it to senderPhoneNumber, the primary key for DynamoDB
   - Extracts a custom field value from the payload which must be defined as https.../[field_name]
   - Appends the field value to the contact's conversation history on DynamoDB as an assistant message
   - Webhook Handler is Lambda Function 4f5b07f7-0e95-45ca-8896-f83ce214cc25
