@@ -1,7 +1,7 @@
 ## See what's in our GitHub
 
 ## AI v3.4 - release in April 2024
-- MyStateMachine-33rm
+- MyStateMachine-33rml899y
   - Webhook Handler is Lambda Function 15358804-ad40-463e-a6b3-36232e30bcb3
   - Receives an SMS payload from Twilio via webhook
   - Extracts the senderPhoneNumber and body
@@ -21,7 +21,7 @@
   - Passes the body of the original inbound message and generated response to OpenAI to generate a new conversation summary
   - Replaces the old conversation summary on DynamoDB with the new conversation summary
  
-- MyStateMachine-dbd8
+- MyStateMachine-dbd8e6wyk
   - Webhook Handler is Lambda Function 50247cd4-f0b9-49ec-8fab-558dd4cb08b2
   - Receives a contact's payload from ActiveCampaign via webhook
   - Extracts a custom field value from the payload which must be defined as https.../[field_name]
