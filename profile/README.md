@@ -2,8 +2,24 @@
 
 ## AI v3.4 - release in April 2024
 - MyStateMachine-33rm
-  - Inbound messages from users are handled by this state machine
   - Webhook Handler is Lambda Function 15358804-ad40-463e-a6b3-36232e30bcb3
+  - Receives an SMS payload from Twilio via webhook
+  - Extracts the senderPhoneNumber and body
+  - Passes the body through moderation layers
+    - Blocked Sender Filter
+    - Self-Harm Filter with Administrator Notification via SMS
+    - Validate or Create Conversation History and Conversation Summary on DynamoDB
+    - PII Filter
+  - Passes the body to conduct a web search with Brave
+  - Retrieves the contact's conversation history and conversation summary from DynamoDB
+  - Passes the web search results, conversation history, and conversation summary to OpenAI to generate a personalized response 
+  - Passes the generated response through moderation layers
+    - Keyword and Phrase Content Moderation Filter
+    - LLM Content Moderation Filter
+  - Sends the generated response to the senderPhoneNumber via Twilio
+  - Appends the body of the original inbound message and generated response to conversation history on DynamoDB
+  - Passes the body of the original inbound message and generated response to OpenAI to generate a new conversation summary
+  - Replaces the old conversation summary on DynamoDB with the new conversation summary
  
 - MyStateMachine-dbd8
   - Webhook Handler is Lambda Function 50247cd4-f0b9-49ec-8fab-558dd4cb08b2
@@ -14,13 +30,12 @@
   - Passes the conversation history and conversation summary to OpenAI to personalize the field value
   - Posts the personalized field value to a custom field [%NEXT] on ActiveCampaign
 
-
 - MyStateMachine-769znuqgd
-  - Receives a contact's payload from ActiveCampaign via webhook
-  - Extracts a contact's email address and converts it to senderPhoneNumber, the primary key for DynamoDB
-  - Extracts a custom field value from the payload which must be defined as https.../[field_name]
-  - Appends the field value to the contact's conversation history on DynamoDB as an assistant message
   - Webhook Handler is Lambda Function 4f5b07f7-0e95-45ca-8896-f83ce214cc25
+  - Receives a contact's payload from ActiveCampaign via webhook
+  - Extracts a custom field value from the payload which must be defined as https.../[field_name]
+  - Extracts a contact's email address and converts it to senderPhoneNumber, the primary key for DynamoDB
+  - Appends the field value to the contact's conversation history on DynamoDB as an assistant message
 
 ## Chatbot v3.3 - release in January 2024
 - GitHub Repository V-3.3-001-C-945
