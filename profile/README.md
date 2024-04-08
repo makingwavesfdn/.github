@@ -42,11 +42,11 @@
   - Receives a contact's payload from ActiveCampaign via webhook
   - Extracts a custom field value from the payload which must be defined as https.../[field_name]
   - Extracts a contact's email address and converts it to senderPhoneNumber
-  - Places senderPhoneNumber and field value in Simple Queue Service 7f56f446-65a7-425a-b7f5-5ea7f3f968a8.fifo
+  - Places senderPhoneNumber and field value in Simple Queue Service 7f56f446...
   - Simple Queue Service triggers Lambda Function a369e7c7-7923-4bc9-aaac-e95d884b4d31
   - Adds a receiptHandle, queueURL, and messageDeduplicationID then sends to State Function MyStateMachine-m980coqm6
   - Sends the message to the recipient via SMS from Twilio
-  - Deletes the message from the Simple Queue Service 7f56f446-65a7-425a-b7f5-5ea7f3f968a8.fifo
+  - Deletes the message from the Simple Queue Service 7f56f446...
 
 ## Chatbot v3.3 - release in January 2024
 - GitHub Repository V-3.3-001-C-945
