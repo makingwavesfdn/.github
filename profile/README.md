@@ -1,6 +1,6 @@
 ## See what's in our GitHub
 
-## AI v3.4 - release in April 2024
+## Copilot v3.4 - release between April 1 and June 30, 2024
 
 - MyStateMachine-33rml899y - in production
   - Webhook Handler is Lambda Function 15358804-ad40-463e-a6b3-36232e30bcb3
