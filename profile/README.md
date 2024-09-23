@@ -2,8 +2,21 @@
 
 ## Copilot v4.x - release between October 1 and December 31, 2024
 
-- Sign-up form
--   https://ln9qiabt.paperform.co
+- Sign-up
+  - A young person signs up for Making Waves via Paperform https://ln9qiabt.paperform.co
+  - Upon submission, their data is passed to Lambda Function 4a7fcbf4-f744-48e2-a0c8-625474165554 via webhook and sent to State Machine 17c40sy92
+  - Further development needed
+
+- Get a response that's fast and to-the-point
+  - The young person texts Making Waves at 510-680-2556 (DEV NUMBER)
+  - Their text message is received by Twilio, passed to Lambda Function e56ebada-de35-451f-8319-f0aa9f45687b via webhook, and sent to State Machine lpe6i03og
+  - A response is generated and sent to the young person via text
+  - Further description needed
+ 
+- Get automatic reminders
+  - Further development needed for Event Bridge
+  - The young person's threadID is sent to State Machine vle8oz6fn
+  - A reminder is generated and sent to the young person via text
 
 
 ## Copilot v3.4 - release between April 1 and June 30, 2024
