@@ -4,7 +4,7 @@
 
 - Sign-up
   - A young person signs up for Making Waves via Paperform https://ln9qiabt.paperform.co
-  - Upon submission, their data is passed to Lambda Function 4a7fcbf4-f744-48e2-a0c8-625474165554 via webhook and sent to State Machine 17c40sy92
+  - Upon submission, their data is passed to Lambda Function 4a7fcbf4-f744-48e2-a0c8-625474165554 via webhook and sent to State Machine ew1b269qp
   - Further development needed
 
 - Get a response that's fast and to-the-point
