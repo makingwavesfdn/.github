@@ -1,6 +1,6 @@
 ## See what's in our GitHub
 
-## Copilot v4.x - release between October 1 and December 31, 2024
+## Copilot v4.2 - release between October 1 and December 31, 2024
 
 - Sign-up
   - A young person signs up for Making Waves via Paperform https://ln9qiabt.paperform.co (DEV SIGN UP FORM)
